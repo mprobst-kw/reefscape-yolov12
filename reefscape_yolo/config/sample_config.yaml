@@ -1,0 +1,52 @@
+# REEFSCAPE YOLOv12 Sample Configuration
+
+# Training configuration
+training:
+  # Model parameters
+  weights: "yolov12n.pt"  # Initial weights (nano model)
+  
+  # Training parameters
+  epochs: 50              # Number of epochs
+  patience: 10            # Early stopping patience
+  imgsz: 640              # Image size
+  batch_size: 16          # Batch size
+  optimizer: "SGD"        # Optimizer type
+  lr0: 0.01               # Initial learning rate
+  lrf: 0.001              # Final learning rate
+  
+  # Augmentation parameters
+  augment: true           # Use augmentation
+  mosaic: true            # Use mosaic augmentation
+  close_mosaic: 10        # Epochs before closing mosaic
+  
+  # Saving parameters
+  project: "runs/detect"  # Project directory
+  name: "reefscape_exp1"  # Experiment name
+  save_period: -1         # Save every N epochs (-1 for last only)
+
+# Dataset configuration
+dataset:
+  path: "data/reefscape/data.yaml"  # Path to dataset configuration
+
+# Validation configuration
+validate:
+  conf: 0.25              # Confidence threshold
+  iou: 0.45               # IoU threshold
+  save_json: true         # Save results to JSON
+  save_hybrid: true       # Save hybrid labels
+  plots: true             # Generate plots
+
+# Inference configuration
+inference:
+  conf: 0.25              # Confidence threshold
+  iou: 0.45               # IoU threshold for NMS
+  max_det: 300            # Maximum detections per image
+  save_img: true          # Save annotated images
+  save_txt: false         # Save results to text files
+  save_json: true         # Save results to JSON
+
+# API configuration
+api:
+  host: "0.0.0.0"         # Host to bind to
+  port: 5000              # Port to listen on
+  debug: false            # Enable debug mode 

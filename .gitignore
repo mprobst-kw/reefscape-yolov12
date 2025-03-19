@@ -1,0 +1,50 @@
+# REEFSCAPE Dataset - Ignore all dataset files
+/2025 REEFSCAPE*
+
+# Virtual environment
+/yolov12Reefscape_env/
+
+# Training run outputs
+/runs/
+/validation_results/
+
+# Data directory (for external data)
+/data/*
+!/data/.gitignore
+
+# Model files (optional - you might want to version control small models)
+*.pt
+/models/*
+!/models/.gitignore
+
+# Mac OS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VSCode
+.vscode/ 
+.cursorignore

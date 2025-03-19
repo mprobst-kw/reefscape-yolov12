@@ -1,0 +1,6 @@
+# Ignore all model files by default
+*
+# Except this file
+!.gitignore
+# Optionally, you could add exceptions for small models you want to track
+# !small_model.pt 
